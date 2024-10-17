@@ -1,6 +1,8 @@
 const express = require("express")
 const route = express.Router()
+
 const todosRoute = require("./todos.route")
+const usersRoute = require("./users.route")
 
 
 route.get("/", (req, res) => {
@@ -10,6 +12,6 @@ route.get("/", (req, res) => {
 })
 
 route.use("/todos", todosRoute)
-// route.use("/users")
+route.use("/users", usersRoute)
 
 module.exports = route
