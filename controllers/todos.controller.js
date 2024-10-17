@@ -7,7 +7,7 @@ module.exports = {
         // console.log(req.payload)
 
         res.status(200).json({
-            message: "Berhasil mendapatkan semua Todo",
+            message: "Berhasil mendapatkan semua Detail Todo",
             data
         })
     },
@@ -52,6 +52,25 @@ module.exports = {
         res.status(200).json({
             message: "Todo berhasil dihapus",
 
+        })
+    },
+    //deletealltodo
+    deleteAllTodo: async (req, res) => {
+
+        await TodoModel.deleteMany({})
+
+        res.status(200).json({
+            message: "All Todo Berhasil dihapus"
+        })
+    },
+    // //gettodoforthetaskonly
+    getTodoForTheTaskOnly: async (req, res) => {
+        
+        const data = await TodoModel.find({}).select("_id task")
+
+        res.status(200).json({
+            message: "Berhasil mendapatkan semua Task Todo",
+            data
         })
     }
 }
