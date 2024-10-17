@@ -2,7 +2,7 @@ const express = require("express")
 const route = express.Router()
 
 const todosRoute = require("./todos.route")
-const usersRoute = require("./users.route")
+const authRoute = require("./auth.route")
 
 
 route.get("/", (req, res) => {
@@ -11,7 +11,7 @@ route.get("/", (req, res) => {
     })
 })
 
+route.use("/auth", authRoute)
 route.use("/todos", todosRoute) //api address
-route.use("/users", usersRoute) //api address
 
 module.exports = route
