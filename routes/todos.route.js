@@ -1,5 +1,11 @@
 const express = require("express")
-const { getAllTodo, getTodoById, addTodo, editTodoById, deleteTodoById } = require("../controllers/todos.controller")
+const { 
+    getAllTodo, 
+    getTodoById, 
+    addTodo, 
+    editTodoById, 
+    deleteTodoById 
+} = require("../controllers/todos.controller")
 const route = express.Router()
 
 route.get("/", getAllTodo)
