@@ -4,6 +4,8 @@ module.exports = {
     getAllTodo: async (req, res) => {
         const data = await TodoModel.find({})
 
+        // console.log(req.payload)
+
         res.status(200).json({
             message: "Berhasil mendapatkan semua Todo",
             data
