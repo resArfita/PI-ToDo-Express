@@ -11,7 +11,7 @@ route.get("/", (req, res) => {
     })
 })
 
-route.use("/todos", todosRoute)
-route.use("/users", usersRoute)
+route.use("/todos", todosRoute) //api address
+route.use("/users", usersRoute) //api address
 
 module.exports = route
