@@ -1,16 +1,6 @@
 const express = require("express")
 const app = express()
 const PORT = process.env.PORT || 3000
-// const dotenv = require("dotenv")
-// const dbConnection = require("./db/conect")
-
-// app.get("/", (req, res) => {
-//     res.json({
-//         message: "Welcome"
-//     })
-// })
-
-// dotenv.config()
 
 
 const allRoute = require("./routes")
@@ -29,5 +19,3 @@ app.use(allRoute)
 app.listen(PORT, () => {
     console.log("Server Running in port " + PORT)
 })
-
-// dbConnection()

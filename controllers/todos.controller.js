@@ -66,11 +66,13 @@ module.exports = {
     // //gettodoforthetaskonly
     getTodoForTheTaskOnly: async (req, res) => {
         
-        const data = await TodoModel.find({}).select("_id task")
+        const data = await TodoModel.find({}).select("task") //this gonna display id and task by default
+
+        const tasks = data.map(todo => todo.task) //use map to only render the task
 
         res.status(200).json({
             message: "Berhasil mendapatkan semua Task Todo",
-            data
+            tasks
         })
     }
 }
