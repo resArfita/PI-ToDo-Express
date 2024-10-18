@@ -10,7 +10,15 @@
 
 *Authentikasi routes*
 - post **"/auth/regis"** (regis)
+  > {
+  >   "name": String,
+  >   "username: String,
+  >   "password": String
+  > }
 - post **"/auth/login"** (login)
-
+  > { 
+  >   "username: String,
+  >   "password": String
+  > }
 
 > PI 2024
