@@ -2,7 +2,8 @@ const mongoose = require("mongoose")
 
 const todoSchema = new mongoose.Schema({
     task:String,
-    status:Boolean,
+    estimasi:String,
+    finish:Boolean,
     user: {
         type: mongoose.ObjectId,
         ref: "User"
